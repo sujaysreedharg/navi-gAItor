@@ -51,6 +51,42 @@ def _build_chart_series(df) -> List[Dict[str, Any]]:
     return df[available].iloc[::step].to_dict(orient="records")
 
 
+_DEF_SEVERITY_PRIORITY = {"critical": 0, "warning": 1, "info": 2}
+
+
+def _select_event_types_for_references(events: List[Dict[str, Any]]) -> List[str]:
+    ordered = sorted(
+        events,
+        key=lambda event: (
+            _DEF_SEVERITY_PRIORITY.get(event.get("severity", "info"), 2),
+            event.get("time_seconds", 0.0),
+        ),
+    )
+    unique: List[str] = []
+    for event in ordered:
+        event_type = event.get("type")
+        if not event_type or event_type in unique:
+            continue
+        unique.append(event_type)
+        if len(unique) >= settings.max_reference_event_types:
+            break
+    if not unique and events:
+        unique.append(events[0].get("type"))
+    return unique
+
+
+_DEF_SEVERITY_KEYS = ["critical", "warning", "info"]
+
+
+def _count_severity(events: List[Dict[str, Any]], extra: List[Dict[str, Any]]) -> Dict[str, int]:
+    counts = {key: 0 for key in _DEF_SEVERITY_KEYS}
+    for entry in events + extra:
+        severity = entry.get("severity", "info").lower()
+        counts[severity] = counts.get(severity, 0) + 1
+    counts["total"] = sum(counts.values())
+    return counts
+
+
 @app.get("/")
 def root() -> Dict[str, Any]:
     return {"service": "navi-gAItor", "status": "ok"}
@@ -94,13 +130,14 @@ async def analyze_flight(file: UploadFile = File(...)) -> Dict[str, Any]:
     rule_events = generate_rule_events(df)
     presets = build_presets(df)
 
+    severity_counts = _count_severity(events, rule_events)
+
     references: List[Dict[str, Any]] = []
     try:
-        critical_types = [e["type"] for e in events if e.get("severity") in {"critical", "warning"}]
-        unique_types = list(dict.fromkeys(critical_types))[: settings.max_reference_event_types]
-        if unique_types:
+        event_types = _select_event_types_for_references(events)
+        if event_types:
             you_client = YoucomSearchClient()
-            for event_type in unique_types:
+            for event_type in event_types:
                 first_event = next(e for e in events if e["type"] == event_type)
                 references.extend(you_client.search_for_event(event_type, first_event))
     except Exception as exc:
@@ -119,12 +156,7 @@ async def analyze_flight(file: UploadFile = File(...)) -> Dict[str, Any]:
         "metadata": metadata,
         "summary": summary,
         "events": events,
-        "events_count": {
-            "total": len(events),
-            "critical": len([e for e in events if e.get("severity") == "critical"]),
-            "warning": len([e for e in events if e.get("severity") == "warning"]),
-            "info": len([e for e in events if e.get("severity") == "info"]),
-        },
+        "events_count": severity_counts,
         "references": references,
         "debrief": debrief,
         "series_data": _build_chart_series(df),

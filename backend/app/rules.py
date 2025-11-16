@@ -84,46 +84,69 @@ def _value(df: pd.DataFrame, column: str, idx: int, default: Optional[float] = N
 def generate_rule_events(df: pd.DataFrame) -> List[Dict[str, Any]]:
     events: List[RuleEvent] = []
     if "hf_index" in df.columns:
-        risk_segment = df[df["hf_index"] > 70]
+        risk_segment = df[df["hf_index"] > 60]
         for idx in risk_segment.index:
+            hf_value = float(df.loc[idx, "hf_index"])
+            if hf_value >= 90:
+                severity = "critical"
+            elif hf_value >= 75:
+                severity = "warning"
+            else:
+                severity = "info"
             events.append(
                 RuleEvent(
                     rule="HF_RISK_HIGH",
-                    severity="warning",
+                    severity=severity,
                     timestamp=float(df.loc[idx, "time_seconds"]),
                     description="Human-factor risk exceeds threshold",
-                    values={"hf_index": round(float(df.loc[idx, "hf_index"]), 1)},
+                    values={"hf_index": round(hf_value, 1)},
                 )
             )
 
     if {"roll_deg", "alt_msl_ft"}.issubset(df.columns):
-        low_alt_bank = df[(df["alt_msl_ft"] < 800) & (df["roll_deg"].abs() > 30)]
+        low_alt_bank = df[(df["alt_msl_ft"] < 900) & (df["roll_deg"].abs() > 25)]
         for idx in low_alt_bank.index:
+            alt_ft = float(df.loc[idx, "alt_msl_ft"])
+            bank = abs(float(df.loc[idx, "roll_deg"]))
+            if alt_ft < 400 and bank >= 45:
+                severity = "critical"
+            elif alt_ft < 800 and bank >= 30:
+                severity = "warning"
+            else:
+                severity = "info"
             events.append(
                 RuleEvent(
                     rule="LOW_ALTITUDE_BANK",
-                    severity="critical" if abs(df.loc[idx, "roll_deg"]) > 45 else "warning",
+                    severity=severity,
                     timestamp=float(df.loc[idx, "time_seconds"]),
                     description="Steep bank near the ground",
                     values={
-                        "alt_ft": round(float(df.loc[idx, "alt_msl_ft"]), 0),
-                        "bank_deg": round(float(df.loc[idx, "roll_deg"]), 1),
+                        "alt_ft": round(alt_ft, 0),
+                        "bank_deg": round(bank, 1),
                     },
                 )
             )
 
     if {"adc_aoa_corrected", "nz_normal_accel"}.issubset(df.columns):
-        aoa_margin = df[(df["adc_aoa_corrected"] > 15) & (df["nz_normal_accel"] > 3)]
+        aoa_margin = df[(df["adc_aoa_corrected"] > 12) & (df["nz_normal_accel"] > 2.5)]
         for idx in aoa_margin.index:
+            aoa = float(df.loc[idx, "adc_aoa_corrected"])
+            nz = float(df.loc[idx, "nz_normal_accel"])
+            if aoa >= 18 or nz >= 3.5:
+                severity = "critical"
+            elif aoa >= 15 or nz >= 3.0:
+                severity = "warning"
+            else:
+                severity = "info"
             events.append(
                 RuleEvent(
                     rule="AOA_MARGIN_LOW",
-                    severity="critical",
+                    severity=severity,
                     timestamp=float(df.loc[idx, "time_seconds"]),
                     description="High AOA with elevated Nz",
                     values={
-                        "aoa_deg": round(float(df.loc[idx, "adc_aoa_corrected"]), 1),
-                        "nz_g": round(float(df.loc[idx, "nz_normal_accel"]), 2),
+                        "aoa_deg": round(aoa, 1),
+                        "nz_g": round(nz, 2),
                     },
                 )
             )
