@@ -1,0 +1,936 @@
+San Francisco | Fremont
+Wifi: Navi_HQ
+Password: flynavi172 Welcome, Developers!
+
+01
+Agenda
+● 9:00 AM - 9:20 AM- Doors Open
+● 9:20 AM - 9:30 AM- Welcome by Nick from NaviAI and Riya from GDG team
+● 9:30 AM - 9:40 AM- Keynote by Peter Danenberg, Senior Software Engineer @ Google 
+Deepmind
+● 9:40 AM - 9:50 AM- Keynote by Christian Bailey, Founder | Inventor | Pilot 
+● 9:50 AM - 10:00 AM- Talk by Vince “Snapper” Sherrer, Air Force Instructor
+● 10:00 AM - 10:30 AM- Hackathon Problem Guidance, Team Forming and Ideation by Sako
+● 10:30 AM - 11:30 AM- Hackathon begins
+● 11:30 AM- Lunch
+● 12:00 PM- Paper Plane Flying Competition (Top 3 winners gets a prize)
+● 1:00 PM- Basketball Shootout Challenge (First 50 gets a free basketball)
+● 3:00 PM- Take a break on a Massage Chair (Optional - Limited seats/time only)
+● 7:00 PM- Hackathon Project Submission Deadline
+● 7:00 PM - 7:30 PM- Round 1 Judging and Dinner
+● 8:00 PM - 8:30 PM- Top 10 Presentations + Prizes
+● 9:00 PM- Wrap up
+02
+Paper Plane 
+Competition 
+
+03 Basketball Competition
+Shoot the shot
+First 50 gets a free 
+basketball!
+
+04 Massage Chairs
+
+05 Selfie Competition
+Rules: Post on LinkedIn 
+using the hashtag by 6PM
+Winner gets a prize!
+#AirwaysHack
+
+06 Join the WhatsApp 
+Group
+
+San Francisco| Fremont
+Our Team
+2025
+Organizers | Team Members | Volunteers
+Riya Dashoriya
+GDG San Francisco
+Anu Mittal
+GDG San Francisco
+Sako M
+GDG San Francisco
+Leopoldo Hernandez
+GDG Fremont
+Buddhi Withanage
+GDG Fremont
+Rob Ross
+Dreamable
+Follow us and become members!
+San Francisco
+ Fremont
+
+08
+Hackathon Mentors
+148 Townsend St, San Francisco, 
+CA
+
+Hackathon 
+Judges
+10
+#BuildWithAI 
+Cloud Credits
+Get Free Cloud Credits for the 
+Workshop
+Visit 
+https://trygcp.dev/claim/devfest-san-francisco 
+to sign up with your Google Account and 
+get access to the Free Tier.
+Learn about Free Tier products at 
+cloud.google.com/free
+
+Get Free Cloud Credits for the 
+Workshop
+https://trygcp.dev/claim/devfest-san-francisco
+
+https://trygcp.dev/claim/devfest-san-francisco
+Click here
+https://trygcp.dev/claim/devfest-san-francisco
+Click here
+1. Click here
+Last step to apply 
+credit! 
+Set your project’s 
+billing account to 
+Google Cloud 
+Platform Trial Billing 
+Account
+Issues when attempting to redeem credits
+It may be unclear where the credits land. If you 
+are confused, navigate to the Credits tab on the  
+page on of the console 
+That is where you 
+will see the credits 
+Issues if you ALREADY have an existing billing account:
+make sure they use the correct one
+Click on the 3 Dot menu on 
+the project, and select 
+“Change Billing,” from the 
+drop down select that 
+Google Cloud Platform Trial 
+Billing 
+
+Code of Conduct
+San Francisco| Fremont
+Be excellent to each other.
+Treat everyone with respect. Participate while acknowledging that everyone 
+deserves to be here — and each of us has the right to enjoy our experience 
+without fear of harassment, discrimination, or condescension, whether blatant 
+or via micro-aggressions. Jokes shouldn’t demean others. Consider what you 
+are saying and how it would feel if it were said to or about you.
+Speak up if you see or hear something.
+Harassment is not tolerated, and you are empowered to politely engage when 
+you or others are disrespected. The person making you feel uncomfortable may 
+not be aware of what they are doing, and politely bringing their behavior to their 
+attention is encouraged.
+Practice saying "Yes and" to each other.
+It’s a theatre improv technique to build on each other’s ideas. 
+We all benefit when we create together.
+Keynote
+
+Keynote
+
+Applied Intelligence
+AI in Aviation
+Christian 
+Bailey
+@CMBail
+
+
+
+
+
+
+
+
+
+Squawk AI
+
+Squawk AI
+Two-pilot Crew Safety
+Total accident rate per 100,000 flight hours
+Same aircraft
+Accident rate 2.7X
+Fatal accident rate 3.7X
+Source: Turbine Aircraft Accident Review, Breiling Associates, 
+2015
+
+
+
+
+
+
+Applied Intelligence
+AI in Aviation Christian 
+Bailey
+@CMBail
+
+
+
+DEVFEST SAN FRANCISCO X FREMONT
+Aviation Hackathon
+2025
+November 15, 2025
+Aviation AI projects featuring Google tools + You.com integration
+Build impactful, demo-ready prototypes today
+Navi AI, 148 Townsend St, San Francisco, CA Google Developer Group
+Navi AI, 148 Townsend St, San Francisco, CA Google Developer Group
+Rob Ross
+Mentor
+AI Agent Strategist 
+7x Startups Acquired
+
+Hackathon Overview
+What's inside:
+30 aviation AI project ideas
+15 featured projects with summaries
+Google AI + You.com tool stack
+Additional projects list + next steps
+Tools you'll use:
+Gemini
+ Vertex AI
+ Vision AI
+You.com Search API
+ Speech-to-Text
+ NotebookLM
+Categories include:
+Training & Safety
+ Flight Ops & Planning
+Air Traﬃc & Comms
+ Maintenance & Support
+Risk & Compliance
+ Creative & Design
+Projects by Diﬃculty
+Beginner: 30%
+Intermediate: 50%
+Advanced: 20%
+2 / 20
+Fly to Standard: Maneuver Performance Analysis
+What it does
+Automatically detect and evaluate whether pilot ﬂew 
+maneuver to FAA/DoD standards
+Analyzes parameters like altitude, bank angle, airspeed, 
+and heading against standards
+Category
+Training & Compliance
+ Time-Series Analysis
+Google tools
+Vertex AI
+ Gemini 2.5 Pro
+Natural Language AI
+Colab (Data Science Agent)
+You.com integration
+You.com Search API retrieves current FAA Practical 
+Test Standards (PTS) and Airman Certiﬁcation 
+Standards (ACS) for accurate grading criteria
+Provides objective grading for training and checkrides
+3 / 20
+See What the Pilot Sees: Cockpit Computer Vision
+What it does
+Identiﬁes pilot actions and cockpit states from HUD or 
+GoPro video
+Analyzes instrument readings, switch positions, and pilot 
+gestures in real-time
+Category
+Training & Safety
+ Computer Vision
+Google tools
+Gemini 2.0 Flash
+ Vision AI
+Video Intelligence API
+ Vertex AI
+You.com integration
+You.com Search API retrieves aircraft-speciﬁc 
+checklists and procedures (POH, AFM) to validate 
+cockpit states and pilot actions
+Enhances training feedback and safety monitoring
+4 / 20
+Mission Risk Predictor
+What it does
+Assess overall risk level of planned mission based on 
+ﬂight plan, pilot experience, weather, and aircraft factors
+Provides go/no-go recommendations with speciﬁc risk 
+factors and mitigation strategies
+Category
+Pre-Flight Safety
+ Risk Assessment
+Google tools
+Vertex AI
+ Gemini 2.5 Pro
+Natural Language AI
+ NotebookLM
+You.com integration
+You.com Search API fetches current weather 
+(METARs, TAFs, winds aloft) and NOTAMs to 
+accurately assess environmental hazards
+Makes go/no-go decisions safer and more objective
+5 / 20
+Hear the Pattern — ATC & Cockpit Audio Intelligence
+What it does
+Transcribes and analyzes radio and cockpit audio for 
+callouts and pattern compliance
+Identiﬁes missed instructions, incorrect readbacks, and 
+deviations from standard phraseology
+Category
+Communication Safety
+ Speech Analysis
+Google tools
+Speech-to-Text (Vertex AI Speech)
+Gemini
+ NotebookLM for summaries
+You.com integration
+Search API cross-checks FAA phraseology and local 
+procedures to verify correct communications and 
+identify deviations
+Reduces communication-based incidents at high-traﬃc airports
+6 / 20
+The AI Co-Pilot
+What it does
+Conversational assistant for checklists, queries, and 
+safety prompts
+Responds to voice commands during critical ﬂight phases
+Provides contextual information based on ﬂight conditions 
+and aircraft
+Category
+Conversational AI
+ Voice Interface
+Google tools
+Gemini
+ Vertex AI Agents
+Dialogﬂow CX (optional)
+You.com integration
+Search API surfaces live procedures, NOTAMs, and 
+POH references for real-time guidance and 
+accurate responses
+Reduces pilot workload during high-stress phases
+7 / 20
+Mission Debrief Dashboard — Navi Mission Intelligence
+What it does
+Uniﬁed debrief dashboard highlighting key events, trends, 
+and insights from ﬂight data
+Visualizes mission performance with customizable 
+metrics and actionable feedback
+Category
+Post-Flight Analysis
+ Multimodal AI
+Google tools
+Gemini 2.5 (multimodal)
+ Vertex AI
+BigQuery (optional)
+You.com integration
+You.com Search API links SOPs, advisories, and 
+best-practice references to provide context for 
+performance insights
+Turns complex ﬂight data into actionable training insights
+8 / 20
+Guardian Angel — Real-time Flight Risk AI Copilot
+What it does
+Live risk scoring with alerts for exceedances and 
+emerging hazards
+Monitors aircraft parameters, weather, traﬃc, and terrain in 
+real-time
+Category
+In-Flight Safety
+ Predictive AI
+Google tools
+Vertex AI
+ Gemini
+Maps API (optional)
+Weather API (optional)
+You.com integration
+You.com Search API pulls live NOTAMs and hazard 
+advisories to provide real-time context for risk 
+assessment
+Acts as a digital safety pilot during critical ﬂight phases
+9 / 20
+Tower Talk Analyzer — ATC Miscommunication Detection
+What it does
+Detects missing readbacks, call-sign confusion, and 
+blocked transmissions in ATC communications
+Identiﬁes communication hazards in real-time with 
+automated alerts to prevent misunderstandings
+Category
+Communication Safety
+ NLP
+Google tools
+Speech-to-Text
+ Natural Language AI
+Gemini
+You.com integration
+You.com Search API references FAA/ICAO 
+phraseology standards to ensure proper detection of 
+communication protocols and standard terminology
+Reduces communication errors and enhances safety in busy airspaces
+10 / 20
+FlightSim Instructor AI — Video-Based Maneuver Grading
+What it does
+Grades simulator maneuvers from screen capture or 
+camera feed in real-time
+Provides detailed explanations and scores based on FAA 
+standards
+Highlights mistakes and offers improvement suggestions 
+for student pilots
+Category
+Training & Education
+ Computer Vision
+Google tools
+Video Intelligence API
+ Vision AI
+Gemini 2.0 Flash
+You.com integration
+Search API brings Airman Certiﬁcation Standards 
+(ACS) and Practical Test Standards (PTS) criteria for 
+accurate rubric alignment when grading maneuvers
+Perfect for ﬂight schools and home simulator training
+11 / 20
+Mission Debrief AI — Instant Flight Analysis
+What it does
+Upload ﬂight data to get automatically detected 
+maneuvers, anomalies, and performance insights
+Provides instant post-ﬂight analysis with detailed 
+recommendations and improvement tips
+Category
+Post-Flight Analysis
+ Multimodal AI
+Google tools
+Vertex AI
+ Gemini 2.5 Pro
+Multimodal reasoning
+You.com integration
+You.com Search API surfaces relevant training and 
+technique references to provide actionable, 
+evidence-based recommendations for improvement
+Reduces debrief time and improves learning outcomes
+12 / 20
+PreFlight Prophet — Predictive Flight Safety Scorer
+What it does
+Predicts go/no-go recommendations with top risk factors 
+and mitigations
+Analyzes weather, pilot experience, aircraft condition, and 
+route complexity
+Category
+Risk Assessment
+ Predictive Analytics
+Google tools
+Vertex AI
+ Gemini
+ NotebookLM
+You.com integration
+Search API aggregates weather/NOTAM sources for 
+RAG, providing real-time risk assessment data and 
+intelligence
+Helps pilots make informed go/no-go decisions with conﬁdence
+13 / 20
+WingWatch AI — Smart Tarmac Collision Prevention
+What it does
+Detects vehicles and aircraft clearance issues on the 
+ground in real time
+Monitors wingtip proximity to obstacles and alerts ground 
+crew of potential collisions
+Identiﬁes common ramp hazards like FOD, unauthorized 
+personnel, and improper positioning
+Category
+Ground Operations
+ Computer Vision
+Google tools
+Vision AI
+ Vertex AI
+ Gemini
+You.com integration
+Search API gathers ramp safety Standard Operating 
+Procedures (SOPs) and incident learnings from 
+industry sources
+Reduces ground damage incidents and improves safety
+14 / 20
+Flight School Radio Show — NotebookLM Audio Learning
+What it does
+Turns ﬂight training documents into an engaging audio 
+podcast for pilot learning
+Dynamically generates conversational lessons with expert 
+explanations and interactive Q&A
+Creates personalized audio study materials for pilots 
+on-the-go
+Category
+Education
+ Audio AI
+Google tools
+NotebookLM
+ Gemini
+Text-to-Speech
+You.com integration
+You.com Search API ingests FAA handbooks, 
+advisory circulars, and ﬂight school Standard 
+Operating Procedures (SOPs) for RAG-powered 
+responses
+Perfect for pilots to study during commutes or exercise
+15 / 20
+Cockpit Composer — Flight Data Soniﬁcation
+What it does
+Converts ﬂight parameters into sound/music to reveal 
+patterns and anomalies
+Transforms altitude, airspeed, bank angle, and other data 
+into audible tones that highlight ﬂight characteristics
+Category
+Creative
+ Audio AI
+Google tools
+Vertex AI
+ Colab (Audio Tooling)
+You.com integration
+You.com Search API ﬁnds soniﬁcation methods, best 
+practices, and research papers on data-to-audio 
+mapping techniques
+Enhances pilot awareness through non-visual senses
+16 / 20
+Flight Deck Fashion Show — AI Cockpit Design
+What it does
+Generates cockpit UI/HMI concepts from prompts and 
+constraints
+Creates customized cockpit displays and control layouts 
+based on speciﬁc aircraft needs and ergonomic 
+requirements
+Category
+Design
+ Image Generation
+Google tools
+Vertex AI Imagen
+ Gemini
+You.com integration
+Search API pulls design guidelines and HMI 
+references for accurate human factors engineering 
+and aviation industry standards
+Reimagine cockpit interfaces for next-gen aviation
+17 / 20
+Additional Projects (15 more in the spreadsheet)
+Explore more ideas:
+Air Traﬃc / Predictive Analytics In-Flight Assistant / Real-Time 
+Operations
+Uniﬁed Dashboard / Multi-Challenge 
+Integration
+Maintenance / Technical Support
+Safety Analysis / Research Assistant Content Creation / Video Generation
+Multi-Agent Systems / Autonomous 
+Operations Human Factors / Behavioral Analysis
+Historical Preservation / Document AI
+Regulatory Compliance / RAG
+Communication / Translation
+Weather / Predictive Science
+Navigation / Computer Vision + RAG
+Culture / Content Creation
+Selection Tips
+Choose a project with accessible data and a clear MVP scope
+Consider build time vs. hackathon duration
+Match project complexity to your team's skill level
+Full details available in the spreadsheet!
+18 / 20
+Tools & Data Quick Guide
+Google AI:
+Gemini 2.5 Pro/Flash - Reasoning, multimodal input/output, code generation
+Vertex AI - Custom prompting, agents, model deployment
+Vision AI / Video Intelligence API - Image/video analysis
+Speech-to-Text - Audio transcription, speaker diarization
+NotebookLM - Study guides, audio brieﬁngs, document analysis
+You.com Integration:
+Search API - Live aviation sources (PTS/ACS, POH/AFM)
+Weather Data - METAR, TAF, winds aloft forecasts
+NOTAMs - Current notices to airmen for ﬂight planning
+RAG Applications - Ground models with citations & sources
+Data You Can Use:
+Flight logs & telemetry
+ Cockpit video
+Radio/cockpit audio
+ Weather & NOTAM feeds
+Aviation manuals
+ Navigation data
+Best Practices:
+Start simple: Build MVP ﬁrst, then enhance
+Focus on the demo: Create a clear demonstration path
+Cite your sources: Especially important for RAG applications
+Ask mentors early: Don't wait until you're stuck
+19 / 20
+Ready to Build the Future of Aviation?
+Next steps
+1 Form a 2–4 person team
+2 Open the spreadsheet and choose a project
+3 Start with MVP: name, what it does, demo path
+4 Integrate Google AI + You.com Search API
+5 Test with sample data, then iterate
+Judging criteria
+Innovation
+ Implementation
+Aviation Impact
+ Team Presentation
+Remember
+Focus on real aviation impact and a clear demo
+Cite sources when using RAG
+Ask mentors for help early
+Timeline
+Hacking ends: 5:00 PM today
+Final presentations: 5:30 PM - 6:30 PM
+Good luck — can't wait to see your demo!
+20 / 20
+
+
+
+
+
+
+
+
+This is an example of 
+a section title slide 
+that is super long, 
+please keep these to 
+five lines maximum
+These subheads can 
+be two lines max
+Editable Location
+Content Slides
+Full screen slides
+Use full-screen slides whenever it makes the most sense for the 
+content you’re creating. The extra slide real estate for full-screen 
+allows for larger graphics and larger text.
+If you’re doing a VO or designing a full-screen animated video, 
+you would use this layout for every slide in your deck.
+
+
+● Bullet one goes here
+● Bullet two goes here and can be freakishly 
+long, but avoid when possible
+● Add space after list item for main bullets
+● Bullets should have 1.5 line spacing
+○ Sub bullet, yay!
+○ Oh sweet, another one
+20pt bullets,
+25pt text
+11pt bullets,
+16pt text
+Example with slide title
+● Bullet one goes here
+● Bullet two goes here
+● Bullet three goes here
+● Bullet four goes here
+Example with slide title, but what if it’s 
+two lines of text?
+● Bullet one goes here
+● Bullet two goes here
+● Bullet three goes here
+● Bullet four goes here
+Editable Location
+Simple statement or 
+quote goes here, lorem 
+ipsum dolor sit amet 
+adipiscing elit sed do 
+eiusmod lorem.
+Editable Location 
+Simple statement or 
+quote goes here, lorem 
+ipsum dolor sit amet 
+adipiscing elit sed do 
+eiusmod lorem.
+Editable Location 
+Simple statement or 
+quote goes here, lorem 
+ipsum dolor sit amet 
+adipiscing elit sed do 
+eiusmod lorem.
+Editable Location 
+Simple statement or 
+quote goes here, lorem 
+ipsum dolor sit amet 
+adipiscing elit sed do 
+eiusmod lorem.
+Editable Location 
+Simple statement or 
+quote goes here, lorem 
+ipsum dolor sit amet 
+adipiscing elit sed do 
+eiusmod lorem.
+Use more than
+of this large number slide
+50%
+
+
+Half screen speaker
+Presenter slides are a great way to engage your 
+audience by showing the presenter on on the 
+right half of the screen and graphics on the left.
+When designing presenter slides make sure your 
+graphics never cross the centerline. This will 
+make sure there is enough space to fit both the 
+presenter and the graphic.
+If your content is too large to fit on a presenter 
+slide or is better for the learner with more space, 
+please use a full-screen slide instead.
+
+Simple quote or 
+statement goes here. 
+Ideally limit to four or 
+five lines max.
+Simple quote or 
+statement goes here. 
+Ideally limit to four or 
+five lines max.
+Use more than
+Of this number slide
+Use more than
+of this large number slide
+50%
+
+Use more than
+of this large number slide
+50%
+
+Use more than
+of this large number slide
+50%
+
+Use more than
+of this large number slide
+50%
+
+Use more than
+of this large number slide
+50%
+
+Simple quote or 
+statement goes here. 
+Ideally limit to four or 
+five lines max.
+Single line title
+Simple quote or statement 
+goes here. Ideally limit to 
+four or five lines max.
+Title goes here, 
+can be two lines
+Simple quote or statement 
+goes here. Ideally limit to 
+four or five lines max.
+Single line title
+● Bullet one goes here
+● Bullet two goes here
+● Bullet three goes here
+● Bullet one goes here
+Title goes here, 
+can be two lines
+● Bullet one goes here
+● Bullet two goes here
+● Bullet three goes here
+● Bullet one goes here
+Quote or short text 
+goes here, adjust box 
+size to match content
+Name Lastname
+Title, Company
+Editable Location
+
+Charts
+Caption Caption
+Caption
+Caption
+Caption Label
+Label
+Label
+Label
+Label
+Large Box Medium Box Labels
+Only use colored labels on 
+corresponding medium box color 
+(blue with pastel blue etc.)
+Arrows
+Chart Elements
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Simple Chart
+All-Purpose Chart
+Short Label
+Step CStep BStep A
+Step EStep D
+Big Portfolio Chart
+Label ThreeLabel TwoLabel One Label Four
+Short Label
+Short Label
+Short Label
+Short Label
+Short Label
+Short Label
+Short Label
+Short Label
+Short Label
+Short Label
+Short Label
+Short Label
+Process Chart
+Column LabelColumn LabelColumn Label Column Label
+Caption
+Two Lines
+Caption
+Two Lines
+Caption
+Two Lines
+Caption
+Two Lines
+Caption
+Two Lines
+Caption
+Two Lines
+Caption
+Two Lines
+Caption
+Two Lines
+Caption
+Two Lines
+Caption
+Two Lines
+Group Label
+Flow-Style Chart
+Bridge Caption Bridge Caption Bridge Caption Bridge Caption
+No
+Start
+Two or three line 
+caption Step A Step B Step C Step D
+Step E Step F EndDecision 
+Node?
+Group Chart
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Short 
+Label
+Process Chart
+A B C D E
+Layer One
+Item A Item B Item C
+Short Label Short Label Short Label Short Label
+Chart Title
+2012 2014 2016 2018 2020
+Caption 3
+Two Lines
+Caption 5
+Two Lines
+Caption 2
+Two Lines
+Caption 4
+Two Lines
+Caption 7
+Two Lines
+Caption 6
+Two Lines
+Caption 8
+Two Lines
+Caption 9
+Two Lines
+Device Frames
+WIREFRAME - MOBILE
+Right click and 
+“replace image”
+Right click and 
+“replace image”
+WIREFRAME - TABLET
+Right click and 
+“replace image”
+Right click and 
+“replace image”
+WIREFRAME - WEAR OS
+Right click and 
+“replace image”
+DEVICE FRAME - PIXEL 8
+Right click and 
+“replace image”
+Right click and 
+“replace image”
+DEVICE FRAME - PIXEL FOLD
+Right click and 
+“replace image”
+Right click and 
+“replace image”
+DEVICE FRAME - iPHONE 14
+Right click and 
+“replace image”
+Right click and 
+“replace image”
+DEVICE FRAME - TABLET
+Right click and 
+“replace image”
+Right click and 
+“replace image”
+DEVICE FRAME - WEAR OS
+Right click and 
+“replace image”
+DEVICE FRAME - CHROMEBOOK PLUS
+Right click and 
+“replace image”
+DEVICE FRAME - PIXELBOOK GO
+Right click and 
+“replace image”
+Logos & Icons
+LOGO LIBRARY - CAN BE SCALED TO ANY SIZE
+Americas APAC EMEA
+US MX CA AR AUBO BR
+CL CO CR EC
+ SV GT
+HN NI PA PE
+ UY
+ES
+NL
+DE
+IT
+CH
+IE
+HK IDIN
+AU
+JP KR
+ MY NZ PH
+SG
+ TH TW
+BE
+GB
+PT
+AT
+FR
+Nordics
+FLAGS - CAN BE SCALED TO ANY SIZE
+

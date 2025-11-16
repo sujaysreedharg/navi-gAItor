@@ -1,0 +1,10 @@
+fastapi==0.115.2
+uvicorn[standard]==0.32.0
+pandas==2.0.3
+numpy==1.26.4
+python-dotenv==1.0.1
+requests==2.32.3
+google-genai==0.6.0
+google-cloud-aiplatform==1.66.0
+python-multipart==0.0.17
+loguru==0.7.2

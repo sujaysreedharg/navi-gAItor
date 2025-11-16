@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #030712;
+  color: #f5f5f5;
+}
+
+a {
+  color: inherit;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}

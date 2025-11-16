@@ -1,0 +1,205 @@
+P r e h a c k s
+Tips to win!
+
+Sako M, Platform Engineer @ Gladly
+@ NAVI AI x GDG DevFest 
+11.15.2025
+
+W h o  I  A m  /  W h y  M e
+https://www.linkedin.com/in/sakom
+ 50+ hackathons in 2024-25
+
+ Multiple 1st & 2nd place finishes, 
+1/50 top hackers selected for 1st 
+reinvent Hackathon in Nov.
+ 
+ Winning never gets easier - but I 
+get better at predicting it, by 
+perfecting every single detail and 
+the process itself. 
+M y  d e fi n i t i o n  o f  h a c k a t h o n
+W i t h  i de a  y o u   h a v e ,  
+w i t h  p e op l e  y o u   k n o w ,  
+w i t h  t o ol s  y o u  A R E   
+F A M I L I A R :  
+SH I P  U SE F U L  T H I N G  F A S T !
+d on ’ t
+d on ’ t
+n o t
+P r o c e s s 1 P e r f o r m a n c e 2 O u t c o m e 3
+O B J E C T I V E S
+H a v e  a s  b i g  t e a m  t h e y  l e t  t o ,  a n d  i d e a t e  
+t i l l  m a p p i n g  t a s k s  t o  t e a m  s k i l l s  a n d  
+i n t e r e s t s .
+
+A s k  f o r  h e l p  w h e n  n e e d e d ,  u s e  a s  m a n y  
+s p o n s o r  p r o d u c t s ,  u s u a l l y  t h e y  h a v e  f r e e  
+p e r k s  d u r i n g  t h e  h a c k a t h o n .   
+H a v e  a  d e d i c a t e d  t e a m  m e m b e r  t o  w o r k  
+o n  l o g i s t i c s  a n d  r e s e a r c h / p r e s e n t a t i o n .  
+D o n ' t  r u s h  t o  s o l u t i o n ,  y o u  l l  b e  
+j u d g e d  b a s e d  o n  p r o b l e m  
+u n d e r s t a n d i n g  a n d  f e a s i b i l i t y  o f  
+s o l u t i o n . 
+H a v e  a  s h i n y  i n t e r a c t i v e  U I . 
+ 
+Y o u  c a n  h a c k  o n  t h e  b a c k  e n d  
+s i d e  a s  m u c h  y o u  w a n t  t o .  
+W i n  t h e  h a c k a t h o n 
+H a v e  a  g o o d  e x p e r i e n c e 
+A s k  f r i e n d s  t o  t a k e  a  v i d e o  w h i l e  
+p r e s e n t i n g  o n  s t a g e ,  s o  t h a t  c a n  
+c h e c k  l a t e r  t o  g e t  b e t t e r  o n  i t . 
+T a k e  a  p i c t u r e  a n d  s h a r e  i n   
+l i n k e d i n  /  t w i t t e r
+S t e p  2
+S t e p  3  S t e p  4
+S t e p  1
+P r e se n t
+De si gn
+S t a ge s  t o  w i n
+E x e c u t e
+T h i n k
+R e c e i v e  S i g n a l 
+ B e  p r e s e n t ,  o p e n  t o  i d e a s 
+ S e p a r a t e  s i g n a l  f r o m  n o i s e
+ 
+T r a n s f o r m  t o  A c t i o n 
+ C o n v e r t  s i g n a l s  i n t o  s t r u c t u r e d ,  
+a c t i o n a b l e  s t e p s 
+I t e r a t e  F a s t 
+ M o v e  f r o m  d e c i s i o n  t o  a c t i o n  t o  
+r e s u l t  -  t i g h t  f e e d b a c k  l o o p s
+ 1. Id ea h o o k 
+
+D e fi n e  I C P
+P i c k  a  p e r s o n a  ( c u s t o m e r ,  u s e r ,  c o m p a n y )  a l i g n e d  w i t h  
+h a c k a t h o n :
+ D e m o g r a p h i c s  ( w h o  t h e y  a r e ) 
+ F i r m o g r a p h i c s  ( o r g  t r a i t s ) 
+ P s y c h o g r a p h i c s  ( m i n d s e t  &  d r i v e r s ) 
+ P a i n  p o i n t s  /  j o b s  t o  b e  d o n e 
+ T r i g g e r  e v e n t s 
+ P M F  ( 4 R s ) 
+ E x c l u s i o n s  ( A n t i - I C P )
+4Rs o f v al ue cr ea t i o n
+ R e v e n u e  –  m a k e  or  
+s a v e  m on e y 
+ R u n t i m e  –  m a k e  or  
+s a v e  t i m e 
+ R i s k  –  l o w e r  
+e x p o s u r e  t o  
+m i s t a k e s  or  f a i l u r e 
+ R e p u t a t i o n  –  e l e v a t e  
+s t a t u s,  c r e di bi l i t y  
+or  t r u s t
+
+D e s i g n  D a t a  fl o w
+https://www.linkedin.com/posts/armand-ruiz_the-quality-of-genai-results-is-a-function-
+activity-7372222668043046912-xCnq
+𝟭/ 𝗠𝗼𝗱𝗲𝗹 𝗾𝘂𝗮𝗹𝗶𝘁𝘆: yes, it matters. But most 
+top-tier models are good enough for 90% of 
+use cases.
+
+𝟮/ 𝗣𝗿𝗼𝗺𝗽𝘁 𝗾𝘂𝗮𝗹𝗶𝘁𝘆: structure, tone, 
+instructions. It shapes the model’s 
+behavior.
+
+𝟯/ 𝗖𝗼𝗻𝘁𝗲𝘅𝘁 𝗾𝘂𝗮𝗹𝗶𝘁𝘆: this is the big one. The 
+right documents, data, and retrieval setup 
+can 10x relevance.
+
+Excellence comes from designing the right 
+system.
+D e s i g n  A g e n t  
+https://www.linkedin.com/posts/armand-ruiz_guide-to-building-an-ai-agent-1-
+%F0%9D%97%96%F0%9D%97%B5%F0%9D%97%BC-activity-7367511460874211328-VTWT/
+ C h o o s e  t h e  R i g h t  L L M
+
+ D e fi n e  t h e  A g e n t ’ s  C o n t r o l  L o g i c
+ 
+ D e fi n e  C o r e  I n s t r u c t i o n s  &  F e a t u r e s
+
+ I m p l e m e n t  a  M e m o r y  S t r a t e g y
+
+ E q u i p  t h e  A g e n t  w i t h  T o o l s  &  A P I s
+
+ D e fi n e  t h e  A g e n t ’ s  R o l e  &  K e y  T a s k s
+
+ H a n d l e  R a w  L L M  O u t p u t s
+
+  S c a l i n g  t o  M u l t i - A g e n t  S y s t e m s  ( A d v a n c e d )
+S c a l e  g r a d e r ( b o n u s )
+https://blitzscalabilitygrader.com/blitzscalability-form
+
+P r o d u c t  u s a g e ( b o n u s )  T h e  g o a l  i s n ’ t  j u s t  t o  b u i l d  s o m e t h i n g  t h a t  w o r k s  -  i t ’ s  
+t o  b u i l d  s o m e t h i n g  t h a t  s c a l e s ,  fi t s  i n t o  r e a l  u s e  c a s e ,  
+a n d  s u r v i v e s  b e y o n d  b u i l d  d a y .
+
+A n d  A m a z o n ’ s  c u s t o m e r  o b s e s s i o n  p r i n c i p l e  s t i l l  
+a p p l i e s : 
+-  c h e a p 
+-  r e l i a b l e  ( q u a l i t y ,  r e a l t i m e ,  s e c u r i t y ) 
+-  f a s t  ( p e r f o r m a n c e ,  e a s e  o f  u s e ) 
+Project Name
+1 linear project 
+description.
+Solution
+Leveraged [data/
+insights] to implement 
+[actions], and achieved 
+[results].
+ Motivation
+What triggered to work 
+on the problem.
+Architecture
+The technical 
+architecture or key 
+components used.
+Problem
+Summarize the core 
+problem.
+How big is problem
+Scale or impact of the 
+problem.
+ 8 .  C r a f t  a  c l e a r  &  e a s y  t o  u n de r s t a n d  s t or y .
+Architecture
+The technical 
+architecture or key 
+components used.
+Architecture
+The technical 
+architecture or key 
+components used.
+Links
+Links to code, slides 
+and demo if any.
+Team
+Mention the team 
+members and their 
+roles.
+A u t o m a t e  S O C - 2  
+c o m p l i a n c e  ev i d e n c e  
+a n d  s e c r et  r ot a t i o n  
+a c r o s s  G i t H u b ,  A W S ,  a n d  
+i n t e r n a l  a p p s ,  w h i l e  
+i n t e g r a t i n g  l o g g i n g ,  
+v a l i d a t i o n ,  a n d  
+d e p l o y m e n t  a u t o m a t i o n  
+i n t o  t h e  C I / C D  p i p e l i n e .
+https://www.linkedin.com/posts/sakom_winning-never-gets-
+easier-but-we-get-activity-7380911819999268865-tAJE
+R e f e r e n c e  p r o j e c t  
+V i b e  c o d e  1 0 0  a p p s
+  w e l l - d e fi n e d  p e r s o n a 
+ s o l v e  a  r e a l  p r o b l e m ( 4 R s :  r e v e n u e ,  r u n t i m e ,  r i s k  a n d  r e p u t a t i o n ) 
+ w e l l  a r c h i t e c t e d :  s c a l a b l e ,  u s a b l e ,  r e l i a b l e ,  s e c u r e  e t c . 
+ w e l l  d e s i g n e d  q u a l i t y  d a t a  w o r k fl o w s 
+ w e l l  d o c u m e n t e d 
+ d e p l o y e d  o n l i n e 
+ h u m a n / a i  f r i e n d l y  i n t e r f a c e 
+ e x p e r i m e n t  w i t h  d i f f e r e n t  a i  t o o l s  i n  s t a c k 
+ o p e n  s o u r c e 
+F e e l  f r e e  t o  s h a r e  y o u r s  u s i n g  h a s h t a g :  # t i m e i s n o w 2 0 2 5    
+ D e c  3 1  i s  r e p o r t i n g  d a y .  L e t ’ s  g o o !
+
