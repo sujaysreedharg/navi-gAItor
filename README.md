@@ -13,8 +13,6 @@ frontend/               Vite + React + TS UI
   src/hooks/            Upload/analysis hook
   src/lib/api.ts        Axios helper for /analyze
   .env.example          Frontend API base URL template
-100_flights_avionics_only/   Cirrus SR20 dataset (463 CSVs, 1 Hz)
-Defense data/                T-38C dataset (70 min, 20 Hz)
 apikey.env             Sample Gemini + You.com keys (do **not** commit)
 ```
 
