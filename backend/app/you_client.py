@@ -59,7 +59,9 @@ class YoucomSearchClient:
         try:
             response = requests.get(self.API_URL, headers=headers, params=params, timeout=10)
             response.raise_for_status()
-            return response.json()
+            data = response.json()
+            web_results = data.get("results", {}).get("web", [])
+            return {"hits": web_results}
         except requests.RequestException as exc:
             logger.warning("You.com search failed: %s", exc)
             return {"hits": [], "error": str(exc)}
@@ -72,8 +74,11 @@ class YoucomSearchClient:
             "STALL_WARNING": "FAA stall recovery procedure",
             "LANDING": "FAA stabilized approach criteria",
             "TAKEOFF": "FAA takeoff performance planning",
+            "HF_RISK_HIGH": "FAA pilot workload human factors safety",
+            "LOW_ALTITUDE_BANK": "FAA low altitude maneuvering safety steep turns",
+            "AOA_MARGIN_LOW": "FAA angle of attack stall margin safety",
         }
-        query = queries.get(event_type, f"FAA {event_type} regulation")
+        query = queries.get(event_type, f"FAA {event_type.replace('_', ' ')} aviation safety")
         results = self.search(query, num_results=2)
         snippets: List[Dict[str, Any]] = []
         for item in results.get("hits", [])[:2]:

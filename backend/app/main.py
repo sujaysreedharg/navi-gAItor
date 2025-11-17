@@ -134,14 +134,24 @@ async def analyze_flight(file: UploadFile = File(...)) -> Dict[str, Any]:
 
     references: List[Dict[str, Any]] = []
     try:
-        event_types = _select_event_types_for_references(events)
+        combined_events = events + rule_events
+        logger.info(f"Total events for You.com selection: {len(combined_events)} (detector: {len(events)}, rule: {len(rule_events)})")
+        event_types = _select_event_types_for_references(combined_events)
+        logger.info(f"Selected {len(event_types)} event types for You.com: {event_types}")
         if event_types:
             you_client = YoucomSearchClient()
             for event_type in event_types:
-                first_event = next(e for e in events if e["type"] == event_type)
-                references.extend(you_client.search_for_event(event_type, first_event))
+                first_event = next((e for e in combined_events if e.get("type") == event_type), None)
+                if not first_event:
+                    continue
+                logger.info(f"Fetching You.com references for {event_type}")
+                refs = you_client.search_for_event(event_type, first_event)
+                logger.info(f"You.com returned {len(refs)} references for {event_type}")
+                references.extend(refs)
+        else:
+            logger.info("No events qualified for You.com references")
     except Exception as exc:
-        logger.warning("Reference lookup failed: %s", exc)
+        logger.warning("Reference lookup failed: %s", exc, exc_info=True)
 
     try:
         gemini_client = GeminiDebriefGenerator()

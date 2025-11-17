@@ -23,14 +23,14 @@ apikey.env             Sample Gemini + You.com keys (do **not** commit)
 - Node.js 18+
 - Access to the attached datasets already present in this repo
 - API keys:
-  - `GEMINI_API_KEY` (or Google AI Studio key)
-  - `YOUCOM_API_KEY`
+  - `GEMINI_API_KEY` (Google AI Studio key from [aistudio.google.com](https://aistudio.google.com))
+  - `YOUCOM_API_KEY` (You.com Search API key from [api.you.com](https://api.you.com) — **not** the Agents beta key)
   - Optional: `VERTEX_PROJECT`, `VERTEX_LOCATION`, `VERTEX_MODEL` if using Vertex AI
 
-Create a `.env` file in the repo root (or export in your shell):
+Create an `apikey.env` file in the repo root (or export in your shell):
 ```env
-GEMINI_API_KEY=replace_me
-YOUCOM_API_KEY=replace_me
+GOOGLE_AI_STUDIO_API_KEY="AIza..."
+YOU_COM_API_KEY="ydc-sk-..."
 VERTEX_PROJECT=optional-gcp-project
 VERTEX_LOCATION=us-central1
 VERTEX_MODEL=gemini-2.5-pro
@@ -87,10 +87,11 @@ The output lives under `frontend/dist/` and can be served via any static host (o
 
 ## Tech Highlights
 - **Parser**: Intelligent header trimming, aircraft auto-detection, numeric coercion, and metadata extraction.
-- **Events**: Takeoff/Landing phases, steep turns, stalls, overspeed, and G-limit exceedances with severity tagging.
-- **References**: You.com API constrained to trusted aviation domains; results attached per critical/warning event.
-- **AI Debrief**: Gemini client supports both Google AI Studio (via `google-genai`) and Vertex AI (via `google-cloud-aiplatform`). Prompt crafts CFI-style notes with regulatory citations.
-- **Frontend**: Vite + React + TypeScript + Recharts + Framer Motion for a ChatGPT-inspired, animated interface.
+- **Events**: Takeoff/Landing phases, steep turns, stalls, overspeed, and G-limit exceedances with dynamic severity tagging (critical/warning/info based on actual values).
+- **Rule Engine**: Computes human-factor risk index (0–100) from vertical speed, bank angle, and G-loads; fires lenient thresholds for HF_RISK_HIGH, LOW_ALTITUDE_BANK, and AOA_MARGIN_LOW.
+- **References**: You.com Search API v1 (`https://api.ydc-index.io/v1/search`) with `X-API-Key` authentication, constrained to trusted aviation domains (faa.gov, boldmethod.com, skybrary.aero, etc.). Results attached for top 3 event types (prioritized by severity).
+- **AI Debrief**: Gemini client supports both Google AI Studio (via `google-genai`) and Vertex AI (via `google-cloud-aiplatform`). Generates initial CFI-style debrief and powers NavigAGENT interactive console with structured log responses.
+- **Frontend**: Vite + React + TypeScript + Recharts + Framer Motion for a ChatGPT-inspired, aviation-themed UI with oscilloscope signal strips, zoom brush, cursor scrubbing, and preset windows.
 
 ## Local Stack Validation
 Executed during this build:
@@ -98,10 +99,20 @@ Executed during this build:
 2. `uvicorn app.main:app --host 127.0.0.1 --port 8000` (with dummy API keys) – verified `/health` OK.
 3. `npm run dev -- --host 127.0.0.1 --port 5173` – verified dev server responds (headers inspected via curl).
 
+## You.com API Integration Details
+
+The backend uses You.com's **Search API v1** (not the Agents beta):
+
+- **Endpoint**: `https://api.ydc-index.io/v1/search`
+- **Method**: `GET` with query parameters (`?query=...&count=...`)
+- **Authentication**: `X-API-Key` header (not Bearer token)
+- **Response format**: JSON with `hits` array containing `{title, url, description}`
+- **Domain filtering**: Queries are constrained to aviation-specific domains via backend logic
+
+Get your Search API key from [api.you.com](https://api.you.com) (API Management → API Keys). The key format is `ydc-sk-...`.
+
 ## Next Suggestions
 - Add backend unit tests under `backend/tests/` with fixture CSV slices.
 - Implement auth & persistence for multi-pilot histories.
 - Enhance charts with 3D ground tracks (Mapbox) and envelope overlays.
 - Package both services with Docker/Compose for Cloud Run deployment per `COMPLETE_BUILD_PROMPT.md`.
-# navi-gAItor
-# navi-gAItor

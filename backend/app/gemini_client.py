@@ -64,12 +64,14 @@ class GeminiDebriefGenerator:
         warning = [e for e in events if e.get("severity") == "warning"]
         info = [e for e in events if e.get("severity") == "info"]
 
-        refs_text = "\n\nRegulatory References:\n"
+        refs_text = "\n\nRegulatory References (CITE THESE IN YOUR DEBRIEF):\n"
         if references:
-            for ref in references:
-                refs_text += f"- {ref.get('title')} ({ref.get('url')})\n  {ref.get('snippet', '')}\n"
+            for i, ref in enumerate(references, 1):
+                refs_text += f"[{i}] {ref.get('event_type', 'GENERAL').replace('_', ' ')} - {ref.get('title')}\n"
+                refs_text += f"    Source: {ref.get('domain', 'faa.gov')}\n"
+                refs_text += f"    Key Point: {ref.get('snippet', '')[:200]}...\n\n"
         else:
-            refs_text += "- None provided\n"
+            refs_text += "- None available\n"
 
         prompt = f"""You are a Certified Flight Instructor (CFI) creating a post-flight debrief.
 
@@ -87,18 +89,21 @@ Critical Events ({len(critical)}):
 Warning Events ({len(warning)}):
 {self._format_events(warning)}
 
-Flight Phases ({len(info)}):
+Info Events ({len(info)}):
 {self._format_events(info)}
 
 {refs_text}
 
 Instructions:
-1. Provide a concise flight overview.
-2. Highlight 2-3 things that went well.
-3. Discuss each critical/warning event with actionable guidance citing references when available.
-4. Offer three training recommendations for the next sortie.
-5. Close with safety notes and tone that is professional yet encouraging.
-Target length: 300-400 words.
+1. Flight Overview: Brief summary of the flight profile.
+2. What Went Well: Highlight 2-3 positive aspects with specifics.
+3. Event Analysis: For each critical/warning/info event, explain the concern and **cite the relevant regulatory reference by number** (e.g., "According to [1], steep turns require..."). Use the snippets to provide authoritative guidance.
+4. Training Recommendations: Three concrete, actionable items for next flight.
+5. Closing: Professional yet encouraging safety notes.
+
+IMPORTANT: Actively reference and cite the regulatory sources provided above using [1], [2], etc. notation. Make the citations feel natural and educational.
+
+Target length: 350-450 words.
 """
         return prompt
 

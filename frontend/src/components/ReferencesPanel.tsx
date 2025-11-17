@@ -10,22 +10,31 @@ export function ReferencesPanel({ references }: ReferencesPanelProps) {
   }
 
   return (
-    <div className="panel">
+    <div className="panel references-panel">
       <div className="panel-header">
         <div>
-          <p className="eyebrow">Regulations</p>
+          <p className="eyebrow">FAA & Regulatory Context</p>
           <h2>You.com Citations</h2>
         </div>
+        <p className="help-text">Referenced in debrief above using [1], [2], etc.</p>
       </div>
-      <div className="references">
-        {references.map((ref) => (
-          <div key={`${ref.event_type}-${ref.url}`} className="reference-item">
-            <p className="reference-tag">{ref.event_type.replace(/_/g, ' ')}</p>
-            <a href={ref.url} target="_blank" rel="noreferrer">
+      <div className="references-grid">
+        {references.map((ref, index) => (
+          <div key={`${ref.event_type}-${ref.url}`} className="reference-card">
+            <div className="reference-header">
+              <span className="reference-number">[{index + 1}]</span>
+              <span className="reference-tag">{ref.event_type.replace(/_/g, ' ')}</span>
+            </div>
+            <a href={ref.url} target="_blank" rel="noreferrer" className="reference-title">
               {ref.title}
             </a>
-            <p>{ref.snippet}</p>
-            <span>{ref.domain}</span>
+            <p className="reference-snippet">{ref.snippet.substring(0, 180)}...</p>
+            <div className="reference-footer">
+              <span className="reference-domain">📚 {ref.domain}</span>
+              <a href={ref.url} target="_blank" rel="noreferrer" className="reference-link">
+                View Source →
+              </a>
+            </div>
           </div>
         ))}
       </div>
