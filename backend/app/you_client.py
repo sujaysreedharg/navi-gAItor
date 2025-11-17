@@ -32,7 +32,7 @@ class YoucomResult:
 
 
 class YoucomSearchClient:
-    API_URL = "https://api.you.com/search"
+    API_URL = "https://api.ydc-index.io/v1/search"
 
     AVIATION_DOMAINS = [
         "faa.gov",
@@ -50,21 +50,19 @@ class YoucomSearchClient:
 
     def search(self, query: str, *, num_results: int = 3, include_domains: Optional[List[str]] = None) -> Dict[str, Any]:
         headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json",
+            "X-API-Key": self.api_key,
         }
-        payload = {
-            "q": query,
-            "num_web_results": num_results,
-            "include_domains": include_domains or self.AVIATION_DOMAINS,
+        params = {
+            "query": query,
+            "count": num_results,
         }
         try:
-            response = requests.post(self.API_URL, headers=headers, json=payload, timeout=10)
+            response = requests.get(self.API_URL, headers=headers, params=params, timeout=10)
             response.raise_for_status()
             return response.json()
         except requests.RequestException as exc:
             logger.warning("You.com search failed: %s", exc)
-            return {"web_results": [], "error": str(exc)}
+            return {"hits": [], "error": str(exc)}
 
     def search_for_event(self, event_type: str, event_data: Dict[str, Any]) -> List[Dict[str, Any]]:
         queries = {
@@ -78,13 +76,13 @@ class YoucomSearchClient:
         query = queries.get(event_type, f"FAA {event_type} regulation")
         results = self.search(query, num_results=2)
         snippets: List[Dict[str, Any]] = []
-        for item in results.get("web_results", [])[:2]:
+        for item in results.get("hits", [])[:2]:
             snippets.append(
                 YoucomResult(
                     title=item.get("title", ""),
                     url=item.get("url", ""),
-                    snippet=item.get("snippet", ""),
-                    domain=item.get("domain", ""),
+                    snippet=item.get("description", ""),
+                    domain=item.get("url", "").split("/")[2] if item.get("url") else "",
                     event_type=event_type,
                 ).as_dict()
             )
